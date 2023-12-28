@@ -65,10 +65,10 @@ const CampaignDetails = () => {
         <div className="flex md:w-[150px] w-full flex-wrap justify-between gap-[30px]">
           <CountBox title="Ngày còn lại" value={remainingDays} />
           <CountBox
-            title={`Raised of ${state.target}`}
+            title={`Quyên góp trên ${state.target}`}
             value={state.amountCollected}
           />
-          <CountBox title="Total Backers" value={donators.length} />
+          <CountBox title="Quyên góp" value={donators.length} />
         </div>
       </div>
 
@@ -76,7 +76,7 @@ const CampaignDetails = () => {
         <div className="flex-[2] flex flex-col gap-[40px]">
           <div>
             <h4 className="font-epilogue font-semibold text-[18px] text-white uppercase">
-              Creator
+              Người phát động
             </h4>
 
             <div className="mt-[20px] flex flex-row items-center flex-wrap gap-[14px]">
@@ -100,7 +100,7 @@ const CampaignDetails = () => {
 
           <div>
             <h4 className="font-epilogue font-semibold text-[18px] text-white uppercase">
-              Story
+              Mô tả
             </h4>
 
             <div className="mt-[20px]">
@@ -112,7 +112,7 @@ const CampaignDetails = () => {
 
           <div>
             <h4 className="font-epilogue font-semibold text-[18px] text-white uppercase">
-              Donators
+              Người quyên góp
             </h4>
 
             <div className="mt-[20px] flex flex-col gap-4">
@@ -132,7 +132,7 @@ const CampaignDetails = () => {
                 ))
               ) : (
                 <p className="font-epilogue font-normal text-[16px] text-[#808191] leading-[26px] text-justify">
-                  No donators yet. Be the first one!
+                  Chưa ai quyên góp. Hãy là người đầu tiên!
                 </p>
               )}
             </div>
@@ -141,12 +141,12 @@ const CampaignDetails = () => {
 
         <div className="flex-1">
           <h4 className="font-epilogue font-semibold text-[18px] text-white uppercase">
-            Fund
+            Quyên góp
           </h4>
 
           <div className="mt-[20px] flex flex-col p-4 bg-[#1c1c24] rounded-[10px]">
             <p className="font-epilogue fount-medium text-[20px] leading-[30px] text-center text-[#808191]">
-              Fund the campaign
+              Xác nhận quyên góp
             </p>
             <div className="mt-[30px]">
               <input
@@ -159,18 +159,18 @@ const CampaignDetails = () => {
               />
 
               <div className="my-[20px] p-4 bg-[#13131a] rounded-[10px]">
-                <h4 className="font-epilogue font-semibold text-[14px] leading-[22px] text-white">
+                {/* <h4 className="font-epilogue font-semibold text-[14px] leading-[22px] text-white">
                   Back it because you believe in it.
                 </h4>
                 <p className="mt-[20px] font-epilogue font-normal leading-[22px] text-[#808191]">
                   Support the project for no reward, just because it speaks to
                   you.
-                </p>
+                </p> */}
               </div>
 
               <CustomButton
                 btnType="button"
-                title="Fund Campaign"
+                title="Xác nhận"
                 styles="w-full bg-[#8c6dfd]"
                 handleClick={handleDonate}
               />
